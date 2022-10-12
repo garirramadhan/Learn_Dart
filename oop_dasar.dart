@@ -1,7 +1,12 @@
-class Person {
+class person{
+
   var _name;
   var _address;
-
+  var _umur; //variabel global untukclass
+  var _bayar;
+  var _email;
+  var _berapakalipembayaran;
+  
   String getName() {
     return this._name;
   }
@@ -16,15 +21,60 @@ class Person {
 
   void setAddress(String address) {
     this._address = address;
+    
+  }
+
+  String getEmail() {
+    return this._email;
+  }
+
+  void setEmail(String email){
+    this._email = email;
+  }
+
+  int getumur() {
+    return this._umur;
+  }
+
+  void setumur(int umur) {
+    this._umur = umur;
+  }
+
+  void setpembayaran(int bayar) {
+    bayar = bayar * 6;
+    this._bayar = bayar;
+  }
+
+  int getpembayaran() {
+    return this._bayar;
+  }
+
+  void setberapakalipembayaran( int berapakalipembayaran ) {
+    berapakalipembayaran = berapakalipembayaran * 1;
+    this._berapakalipembayaran = berapakalipembayaran;
+  }
+
+  int getberapakalipembayaran() {
+    return this._berapakalipembayaran;
   }
 }
 
 // fungsi main
 main() {
-  var dian = new Person();
-  dian.setName("Dian");
-  dian.setAddress("Lombok");
+  var _umur;
+  var karyawan = new person();
+  _umur = 20;
+  karyawan.setName("Gari Ramadhan");
+  karyawan.setAddress("Bekasi");
+  karyawan.setEmail("ramadhan.gaari@gmail.com");
+  karyawan.setumur(_umur);
+  karyawan.setpembayaran(20000);
+  karyawan.setberapakalipembayaran(1);
 
-  print("Nama: ${dian.getName()}");
-  print("Alamat: ${dian.getAddress()}");
+  print("Nama: ${karyawan.getName()}");
+  print("Alamat: ${karyawan.getAddress()}");
+  print("Email: ${karyawan.getEmail()}");
+  print("umur: ${karyawan.getumur()}");
+  print("PEMBAYARAN: ${karyawan.getpembayaran()}");
+  print("berapakalipembayaran: ${karyawan.getberapakalipembayaran()}");
 }
