@@ -50,7 +50,7 @@ class person{
   }
 
   void setberapakalipembayaran( int berapakalipembayaran ) {
-    berapakalipembayaran = berapakalipembayaran * 1;
+    berapakalipembayaran = berapakalipembayaran;
     this._berapakalipembayaran = berapakalipembayaran;
   }
 
@@ -69,7 +69,7 @@ main() {
   karyawan.setEmail("ramadhan.gaari@gmail.com");
   karyawan.setumur(_umur);
   karyawan.setpembayaran(20000);
-  karyawan.setberapakalipembayaran(1);
+  karyawan.setberapakalipembayaran(6);
 
   print("Nama: ${karyawan.getName()}");
   print("Alamat: ${karyawan.getAddress()}");
